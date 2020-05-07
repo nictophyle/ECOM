@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>675</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<style>
+.mySlides {display:none;}
+h1{
+font-family: "Times New Roman", Times,red serif;
+font-size: 72px;
+font-weight:bold;
+text-shadow: 3px 2px Green;
+color: white;
+}
+h3{
+font-stretch: extra-expanded;
+font-weight:bold;
+font-size: 32px;
+color: white;
+text-shadow: 3px 2px Red;
+outline-color: black;
+}
+p{
+color: white;
+text-align:center-left;
+font-weight:bold;
+}
+</style>
+</head>
+<body background="t1bg.jpg";>
+
+<div class="w3-container"><Center>
+  <h1>Two Wheels Only</h1>
+  <h3>Triumph Street Triple 675</h3></Center>
+  </div>
+<Center>
+<div class="w3-content" style="max-height:100px">
+  <img class="mySlides" src="https://th.bing.com/th/id/OIP.STEGj4ONRZBAfvi8czaGlQHaGK?pid=Api&rs=1" style="width:50%;display:none">
+  <img class="mySlides" src="https://s2.paultan.org/image/2018/01/Triumph-Street-Triple-675-4-630x420.jpg" style="width:50%">
+  <img class="mySlides" src="http://www.accessdesign.fr/WebRoot/LaPoste/Shops/box2212/5438/01DE/0D14/19FB/AA0A/0A0C/05EE/204D/BAT001_-_Bavette_arriereTriumph_Street_triple_675_800_et_Daytona_675_.007.jpg" style="width:50%;display:none">
+
+  <div class="w3-row-padding w3-section">
+    <div class="w3-col s4">
+      <img class="demo w3-opacity w3-hover-opacity-off" src="https://mcn-images.bauersecure.com/pagefiles/618676/street-triple-2.jpg" style="width:100%;cursor:pointer" onclick="currentDiv(1)">
+    </div>
+    <div class="w3-col s4">
+      <img class="demo w3-opacity w3-hover-opacity-off" src="http://i.ytimg.com/vi/j8xzmd4qT8s/maxresdefault.jpg" style="width:100%;cursor:pointer" onclick="currentDiv(2)">
+    </div>
+    <div class="w3-col s4">
+      <img class="demo w3-opacity w3-hover-opacity-off" src="C:\Users\Junaid\Documents\E-Commerce\img\t3.jpeg" style="width:100%;cursor:pointer" onclick="currentDiv(3)">
+    </div>
+  </div>
+</div>
+</center>
+<script>
+
+var myIndex = 0;
+carousel();
+
+function carousel() {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";  
+  }
+  myIndex++;
+  if (myIndex > x.length) {myIndex = 1}    
+  x[myIndex-1].style.display = "block";  
+  setTimeout(carousel, 4000);
+}
+function currentDiv(n) {
+  showDivs(slideIndex = n);
+}
+
+function showDivs(n) {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("demo");
+  if (n > x.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = x.length}
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" w3-opacity-off", "");
+  }
+  x[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " w3-opacity-off";
+}
+
+</script>
+<p>
+<i>Market Value: ₹10,00,000/- brand new<br>
+Our Price: ₹6,49,999/-(non-negotiable)</i><br>
+Specs:<br>
+Reg Year: 2016<br>
+Odometer: 20,0000kms<br>
+No. of Owners: 3<br>
+Engine:       Inline 3<br>
+0-100kmph:    6seconds<br> 
+Fuel Average: 20kmpl<br>
+<br><br>
+Call : +91 8899446622 <br>
+or<br>
+Visit Shaman Triumph(Jogeshwari)<br>
+
+</p>
+</body>
+</html>
+
