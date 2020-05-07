@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+<style>
+video{
+
+width:20%;
+height:*;
+}body
+{
+margin-bottom:175px;	
+background-position: center;
+background-repeat:no-repeat;
+background-right: 0;
+background-bottom: 0;
+background-width:10px;
+background-height:10px;
+}
+input[type=text],input[type=password]
+{
+  width: 20%;
+  padding: 15px;
+  margin: 2px 0 15px 0;
+  border: none;
+  background: black;
+  opacity: 0.5;
+  color: white;
+}
+
+input[type=text]:focus, input[type=password]:focus {
+  background-color: teal;
+  color: white;
+  outline: none;
+}
+
+.btn {
+  background-color: green;
+  color: white;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  width: 30%;
+  opacity: 0.5;
+}
+.btn:hover{
+	opacity: 1;
+}
+</style>
+</head>
+<body> <center>
+
+</script>
+
+
+	<h1><center>REGISTRATION FORM</center></h1>
+
+	<div class="container"><br>
+		
+		<div class="col-lg-6 m-auto d-block">
+			
+			<form method="post" onsubmit="return validation()" class="bg-light">
+				
+				<div class="form-group">
+					<label for="user" class="font-weight-bold"> Username: </label><br><br>
+					<input type="text" name="user" class="form-control" id="user" autocomplete="off"><br><br>
+					<span id="username" class="text-danger font-weight-bold"> </span><br><br>
+				</div>
+
+				<div class="form-group">
+					<label class="font-weight-bold"> Password: </label><br><br>
+					<input type="password" name="pass" class="form-control" id="password" autocomplete="off"><br><br>
+					<span id="passwords" class="text-danger font-weight-bold"> </span><br><br>
+				</div>
+
+
+				<div class="form-group">
+					<label class="font-weight-bold"> Mobile Number: </label><br><br>
+					<input type="text" name="mobile" class="form-control" id="mobileNumber" autocomplete="off"><br><br>
+					<span id="mobileno" class="text-danger font-weight-bold"> </span><br><br>
+				</div>
+
+				<div class="form-group">
+					<label class="font-weight-bold"> Email: </label><br><br>
+					<input type="text" name="email" class="form-control" id="emails" autocomplete="off"><br><br>
+					<span id="emailids" class="text-danger font-weight-bold"> </span><br><br>
+				</div>
+
+				<input type="submit" name="submit" value="SUBMIT" class="btn btn-success" 	autocomplete="off">
+
+
+			</form><br><br>
+
+
+		</div>
+	
+	</div>
+
+
+
+	<script type="text/javascript">
+		
+
+		function validation(){
+
+			var user = document.getElementById('user').value;
+			var password = document.getElementById('password').value;
+			var mobileNumber = document.getElementById('mobileNumber').value;
+			var emails = document.getElementById('emails').value;
+
+
+
+
+
+			if(user == ""){
+				document.getElementById('username').innerHTML =" <span style='color:#F10606'>Username Field Cannot Be Empty</span>";
+				return false;
+			}
+			if(!isNaN(user)){
+				document.getElementById('username').innerHTML ="<span style='color:#F10606'> Enter Only Characters</span>";
+				return false;
+			}
+
+
+
+
+
+
+
+			if(password == ""){
+				document.getElementById('passwords').innerHTML ="<span style='color:#F10606'> Password Field Cannot Be Empty</span>";
+				return false;
+			}
+
+
+
+			if(mobileNumber == ""){
+				document.getElementById('mobileno').innerHTML =" <span style='color:#F10606'>Mobile Number Cannot Be Null</span>";
+				return false;
+			}
+			if(isNaN(mobileNumber)){
+				document.getElementById('mobileno').innerHTML =" <span style='color:#F10606'>ENTER ONLY DIGITS NOT CHARACTERS</span>";
+				return false;
+			}
+			if(mobileNumber.length!=10){
+				document.getElementById('mobileno').innerHTML ="<span style='color:#F10606'> MOBILE NUMBER MUST BE 10 DIGITS ONLY</span>";
+				return false;
+			}
+
+
+
+			if(emails == ""){
+				document.getElementById('emailids').innerHTML ="<span style='color:#F10606'> EMAILS FIELD CANNOT BE EMPTY</span>";
+				return false;
+			}
+			if(emails.indexOf('@') <= 0 ){
+				document.getElementById('emailids').innerHTML ="<span style='color:#F10606'><b> @ </b>Invalid Position</span>";
+				return false;
+			}
+			if((emails.charAt(emails.length-4)!='.') && (emails.charAt(emails.length-3)!='.')){
+			    document.getElementById('emailids').innerHTML ="<span style='color:#F10606'><b> ' . ' </b>Invalid Position</span>";
+				return false;
+			}
+
+		}
+
+	</script>
+
+</center>
+
+</body>
+
+</html>
